@@ -2,8 +2,10 @@
   "buildCommand": "npm run build",
   "installCommand": "npm install",
   "framework": "other",
-  "outputDirectory": "dist/server",
-  "env": {
-    "NODE_ENV": "production"
-  }
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/api/handler"
+    }
+  ]
 }
